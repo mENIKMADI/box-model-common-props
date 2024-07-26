@@ -341,7 +341,7 @@ footer{
     font-size: 1.1rem;
     font-weight: bold;
     width: 50%;
-   box-shadow: var(--box-shadow-lg);
+    box-shadow: var(--box-shadow-lg);
 }
 
 /* For the first link in this section: */
@@ -370,8 +370,8 @@ footer{
 }
 
 #section2 div > p:last-of-type{
-    background-color: rgb(0, 128, 128);
-    border: 4px dashed rgb(169, 169, 169);
+    background-color: var(--dk-teal-rgba);
+    border: 4px dashed var(--dk-gray);
     margin: 16px 60px 32px 8px;
     padding: 32px 8px 16px 60px;
 }
@@ -383,8 +383,8 @@ footer{
 
 #section2 a:first-of-type:hover{
     background-color: var(--dk-blue);
-    color: rgb(255, 255, 255);
-    border: var(--lt-blue);
+    color: var(--white);
+  border-color: var(--lt-blue);
     box-shadow: var(--box-shadow-sm);
 }
 
@@ -453,7 +453,7 @@ footer{
     transform: translateY(-50px);
     transform:translateX(25px, -50px);
 }
-
+/* LEFT OFF HERE */
 
 /* ------------- SECTION 4 STYLES ---------------- */
 /* Margin collapse and centering with margin */
