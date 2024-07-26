@@ -438,9 +438,8 @@ footer{
     position: relative;
     z-index: 2;
     top: -50px;
-    left: 25px;
+    left: +25px;
 }
-/* LEFT OFF HERE */
 
 /* ------------- SECTION 4 STYLES ---------------- */
 /* Margin collapse and centering with margin */
@@ -450,17 +449,8 @@ footer{
     margin: 2rem 0;
 }
 
-/* For the second paragraph */
-/* 
-    TO DO: add styles to the last paragraph in this section that will:
-        - add margin:
-            - top: 1rem
-            - right: 0
-            - bottom: 1rem
-            - left: 0
-*/
 #section4 p:last-of-type{
-
+    margin: 1rem 0;
 }
 
 /* ------------- SECTION 5 STYLES ---------------- */
