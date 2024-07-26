@@ -334,6 +334,15 @@ footer{
         - add the large box shadow
 */
 /* ADD SELECTOR AND STYLES HERE */
+#section2 a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    width: 50%;
+    box-shadow: var(--filter-shadow-lg);
+}
 
 /* For the first link in this section: */
 #section2 a:first-of-type{
