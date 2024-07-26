@@ -381,19 +381,11 @@ footer{
     border: 1px solid var(--teal);
 }
 
-/* To change the styles on each of those links when you're hovering over them with a mouse */
-/* 
-    TO DO: add styles to the first link on hover in this section that will:
-        - make the background the dk-blue color
-        - make the text white
-        - change the color of the border to the lt-blue color
-        - add the small box shadow, using the variable in the root
-*/
 #section2 a:first-of-type:hover{
-background-color: var(--dk-blue);
-color: rgb(255, 255, 255);
-border: var(--lt-blue);
-box-shadow: var(--box-shadow-sm);
+    background-color: var(--dk-blue);
+    color: rgb(255, 255, 255);
+    border: var(--lt-blue);
+    box-shadow: var(--box-shadow-sm);
 }
 
 #section2 a:last-of-type:hover{
