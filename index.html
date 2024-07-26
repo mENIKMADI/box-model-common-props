@@ -1,199 +1,343 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>The CSS Box Model and Common Properties</title>
+  <head>
+    <meta charset="utf-8" />
+    <title>The CSS Box Model and Common Properties</title>
+    <meta name="author" content="Christian Ventura" />
+    <meta
+      name="description"
+      content="Practicing the CSS Box Model and commonly used CSS properties"
+    />
 
-        <!-- ADD YOUR NAME TO THE AUTHOR TAG -->
-        <!-- TO DO -->
-        <meta name="author" content="">
-        <meta name="description" content="Practicing the CSS Box Model and commonly used CSS properties">
+    <!-- THIS META TAG IS INCLUDED BECAUSE THIS PAGE IS RESPONSIVE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <!-- THIS META TAG IS INCLUDED BECAUSE THIS PAGE IS RESPONSIVE -->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;900&display=swap"
+      rel="stylesheet"
+    />
 
-        <!-- GOOGLE FONTS -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;900&display=swap" rel="stylesheet">
+    <!-- LINK TO CSS FILE -->
+    <!-- TO DO -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body id="top">
+    <header>
+      <h1>The&nbsp;CSS Box&nbsp;Model and&nbsp;Common CSS&nbsp;Properties</h1>
+      <nav>
+        <ul>
+          <li><a href="#section1">The&nbsp;CSS Box&nbsp;Model</a></li>
+          <li>
+            <a href="#section2">Practice&nbsp;With the&nbsp;Box&nbsp;Model</a>
+          </li>
+          <li><a href="#section3">Using&nbsp;Width and&nbsp;Height</a></li>
+          <li><a href="#section4">Margin Collapse &amp Centering</a></li>
+          <li><a href="#section5">Background Images: Default</a></li>
+          <li><a href="#section6">Background Images: Alignment</a></li>
+          <li><a href="#section7">Background Images: Patterns</a></li>
+          <li><a href="#section8">Using Floats</a></li>
+          <li><a href="#section9">The Display Property</a></li>
+        </ul>
+      </nav>
+    </header>
 
-        <!-- LINK TO CSS FILE -->
-        <!-- TO DO -->
-    </head>
-    <body id="top">
-        <header>
-            <h1>The&nbsp;CSS Box&nbsp;Model and&nbsp;Common CSS&nbsp;Properties</h1>
-            <nav>
-                <ul>
-                    <li><a href="#section1">The&nbsp;CSS Box&nbsp;Model</a></li>
-                    <li><a href="#section2">Practice&nbsp;With the&nbsp;Box&nbsp;Model</a></li>
-                    <li><a href="#section3">Using&nbsp;Width and&nbsp;Height</a></li>
-                    <li><a href="#section4">Margin Collapse &amp Centering</a></li>
-                    <li><a href="#section5">Background Images: Default</a></li>
-                    <li><a href="#section6">Background Images: Alignment</a></li>
-                    <li><a href="#section7">Background Images: Patterns</a></li>
-                    <li><a href="#section8">Using Floats</a></li>
-                    <li><a href="#section9">The Display Property</a></li>
-                </ul>
-            </nav>
-        </header>
+    <main>
+      <p>
+        Today we'll practice using some common CSS properties to style the
+        elements on a page. We'll also discuss what you need to consider when
+        styling those elements (like whether they are <code>inline</code> or
+        <code>block</code>-level elements). We will add <code>color</code> to
+        text and <code>backgrounds</code>, <code>border</code>s, shadows, and
+        <code>background</code> images using CSS variables. We'll also talk
+        about how you can use <code>float</code>s (then we'll learn how to
+        better control layout using CSS <code>flexbox</code> and
+        <code>grid</code> in Module 5).
+      </p>
+      <section id="section1">
+        <h2>The CSS Box Model</h2>
+        <p>
+          A screenshot taken from your zyBook is shown below. It is marked up to
+          show how the CSS box model works with content, code,
+          <code>padding</code>, and <code>margin</code> (border would normally
+          be included between the <code>padding</code> and the
+          <code>margin</code> of the element). Open the dev tools in your
+          browser to see the box model on your page as we add styles.
+        </p>
+        <img
+          src="images/box-model-zybooks.png"
+          alt="screenshot from the zyBook showing the c.s.s. box model with a rendered elements and styles"
+          width="543"
+          height="357"
+        />
+      </section>
 
-        <main>
-            <p>
-                Today we'll practice using some common CSS properties to style the elements on a page. We'll also discuss what you need to consider when styling those elements (like whether they are <code>inline</code> or <code>block</code>-level elements). We will add <code>color</code> to text and <code>backgrounds</code>, <code>border</code>s, shadows, and <code>background</code> images using CSS variables. We'll also talk about how you can use <code>float</code>s (then we'll learn how to better control layout using CSS <code>flexbox</code> and <code>grid</code> in Module 5).
-            </p>
-            <section id="section1">
-                <h2>The CSS Box Model</h2>
-                <p>
-                    A screenshot taken from your zyBook is shown below. It is marked up to show how the CSS box model works with content, code, <code>padding</code>, and <code>margin</code> (border would normally be included between the <code>padding</code> and the <code>margin</code> of the element). Open the dev tools in your browser to see the box model on your page as we add styles.
-                </p>
-                <img src="images/box-model-zybooks.png" alt="screenshot from the zyBook showing the c.s.s. box model with a rendered elements and styles" width="543" height="357">
-            </section>
+      <section id="section2">
+        <!-- Box model: content, padding, border, margin, dev tools, inline & block elements -->
+        <h2>Practice With the Box Model</h2>
+        <p>
+          Follow along as we add styles to the elements below to see the box
+          model in action.
+        </p>
+        <a href="#">This is link #1</a>
+        <p>
+          This is a paragraph. Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+          ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+        <a href="#">This is link #2</a>
+        <div>
+          <p>
+            This is another paragraph. It is wrapped in a <code>div</code> so
+            that you can see how the <code>margin</code> and
+            <code>padding</code> change where it is located inside of its
+            container. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat.
+          </p>
+        </div>
+      </section>
 
-            <section id="section2">
-                <!-- Box model: content, padding, border, margin, dev tools, inline & block elements -->
-                <h2>Practice With the Box Model</h2>
-                <p>
-                    Follow along as we add styles to the elements below to see the box model in action.
-                </p>
-                <a href="#">This is link #1</a>
-                <p>
-                    This is a paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-                <a href="#">This is link #2</a>
-                <div>
-                    <p>This is another paragraph. It is wrapped in a <code>div</code> so that you can see how the <code>margin</code> and <code>padding</code> change where it is located inside of its container. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </div>
-            </section>
+      <section id="section3">
+        <!-- Using width and height to size elements -->
+        <h2>Using Width &amp; Height to Size Elements</h2>
+        <p>
+          You can also use the <code>width</code> and
+          <code>height</code> properties to control the size of an element with
+          CSS, but these settings are mostly used for things like images and
+          other decorative elements, to define a <code>height</code> for a
+          container with elements <code>float</code>ing in it, or to allow for
+          centering an element on the page (before you can center anything with
+          <code>margin</code>, it has to have a <code>width</code> set first).
+        </p>
+        <img
+          src="images/corgi-full.svg"
+          alt="vector graphic of a smiling corgi standing on all legs with its head turned to the user"
+          width="300"
+          height="300"
+        />
+        <div></div>
+      </section>
 
-            <section id="section3">
-                <!-- Using width and height to size elements -->
-                <h2>Using Width &amp; Height to Size Elements</h2>
-                <p>
-                    You can also use the <code>width</code> and <code>height</code> properties to control the size of an element with CSS, but these settings are mostly used for things like images and other decorative elements, to define a <code>height</code> for a container with elements <code>float</code>ing in it, or to allow for centering an element on the page (before you can center anything with <code>margin</code>, it has to have a <code>width</code> set first).
-                </p>
-                <img src="images/corgi-full.svg" alt="vector graphic of a smiling corgi standing on all legs with its head turned to the user" width="300" height="300">
-                <div></div>
-            </section>
+      <section id="section4">
+        <!-- Margin collapse and centering with margin -->
+        <h2>Margin&nbsp;Collapse &amp; Centering&nbsp;Elements</h2>
+        <p>
+          When two elements that are next to each other have
+          <code>margin</code> set on them both, that <code>margin</code> that
+          you might expect to push them further apart will actually overlap
+          instead. This is called <code>margin</code> collapse.
+        </p>
+        <p class="second-para">
+          You can also use <code>margin</code> to center an element within a
+          container, but
+          <strong
+            >there are some important things to remember to do when trying to
+            center an element:</strong
+          >
+        </p>
+        <ul>
+          <li>
+            &#8277;&nbsp;Is the element an <code>block</code>-level element? If
+            it isn't, you will need to set it to
+            <code>display: block;</code> before you can center it with
+            <code>margin</code>.
+          </li>
+          <li>
+            &#8277;&nbsp;Does the element have a <code>width</code> set?
+            <code>block</code>-level elements take up 100% of the
+            <code>width</code> of their containers, so if you want to center
+            them inside of one, you have to set a <code>width</code> first.
+          </li>
+          <li>
+            &#8277;&nbsp;Apply your <code>margin</code>! With two values, the
+            first will set the <code>margin-top</code> and
+            <code>margin-bottom</code>, and the second will set the
+            <code>margin-left</code> and <code>margin-right</code>. Left and
+            right must be set to "<code>auto-</code>" to center the element, but
+            you can set the <code>margin-top</code> and
+            <code>margin-bottom</code> to zero, or to an actual value to create
+            vertical space between elements.
+          </li>
+        </ul>
+        <p>
+          This is the first paragraph. Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+          ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+        <p>
+          This is the second paragraph. Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+          ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+      </section>
 
-            <section id="section4">
-                <!-- Margin collapse and centering with margin -->
-                <h2>Margin&nbsp;Collapse &amp; Centering&nbsp;Elements</h2>
-                <p>
-                    When two elements that are next to each other have <code>margin</code> set on them both, that <code>margin</code> that you might expect to push them further apart will actually overlap instead. This is called <code>margin</code> collapse.
-                </p>
-                <p class="second-para">
-                    You can also use <code>margin</code> to center an element within a container, but <strong>there are some important things to remember to do when trying to center an element:</strong>
-                </p>
-                <ul>
-                    <li>
-                        &#8277;&nbsp;Is the element an <code>block</code>-level element? If it isn't, you will need to set it to <code>display: block;</code> before you can center it with <code>margin</code>.
-                    </li>
-                    <li>
-                        &#8277;&nbsp;Does the element have a <code>width</code> set? <code>block</code>-level elements take up 100% of the <code>width</code> of their containers, so if you want to center them inside of one, you have to set a <code>width</code> first.
-                    </li>
-                    <li>
-                        &#8277;&nbsp;Apply your <code>margin</code>! With two values, the first will set the <code>margin-top</code> and <code>margin-bottom</code>, and the second will set the <code>margin-left</code> and <code>margin-right</code>. Left and right must be set to "<code>auto-</code>" to center the element, but you can set the <code>margin-top</code> and <code>margin-bottom</code> to zero, or to an actual value to create vertical space between elements.
-                    </li>
-                </ul>
-                <p>
-                    This is the first paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-                <p>
-                    This is the second paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-            </section>
-
-            <section id="section5">
-                <!-- Background Images with CSS -->
-                <h2>Background Images with CSS - Default Behavior</h2>
-                <p>
-                    We've already talked about using CSS to add decorative images, and there are a few ways that you can use them on your pages. First, let's see what happens with the <code>default</code> behavior of a <code>background-image</code> added through CSS.
-                </p>
-                <div id="bkgrnd-img-default"></div>
-                <!-- 
+      <section id="section5">
+        <!-- Background Images with CSS -->
+        <h2>Background Images with CSS - Default Behavior</h2>
+        <p>
+          We've already talked about using CSS to add decorative images, and
+          there are a few ways that you can use them on your pages. First, let's
+          see what happens with the <code>default</code> behavior of a
+          <code>background-image</code> added through CSS.
+        </p>
+        <div id="bkgrnd-img-default"></div>
+        <!-- 
                     Photo by <a href="https://unsplash.com/@oddityandgrace?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">hannah grace</a> on <a href="https://unsplash.com/images/animals/puppies?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
                 -->
-                <p>
-                    Notice that the image is tiled (repeated). The first image is placed in the upper-left-hand corner of the container, and then it fills the space with the tiled image until it runs out. If the container is wider or taller than a full row or column of images, it will still add the image there, but will cut it off partially.
-                </p>
-            </section>
+        <p>
+          Notice that the image is tiled (repeated). The first image is placed
+          in the upper-left-hand corner of the container, and then it fills the
+          space with the tiled image until it runs out. If the container is
+          wider or taller than a full row or column of images, it will still add
+          the image there, but will cut it off partially.
+        </p>
+      </section>
 
-            <section id="section6">
-                <!-- Background Images with CSS -->
-                <h2>Background Images with CSS - Control Alignment</h2>
-                <p>
-                    We know now that a <code>background-image</code> will fill a container in tiles, but we can tell the CSS not to tile the image. We can also control the alignment of those tiles or individual images with CSS, and you can include a <code>background-color</code> in the container as well.
-                </p>
-                <div id="bg-img-1"></div>
-                <div id="bg-img-2"></div>
-                <div id="bg-img-3"></div>
-                <div id="bg-img-4"></div>
-                <div id="bg-img-5"></div>
-            </section>
+      <section id="section6">
+        <!-- Background Images with CSS -->
+        <h2>Background Images with CSS - Control Alignment</h2>
+        <p>
+          We know now that a <code>background-image</code> will fill a container
+          in tiles, but we can tell the CSS not to tile the image. We can also
+          control the alignment of those tiles or individual images with CSS,
+          and you can include a <code>background-color</code> in the container
+          as well.
+        </p>
+        <div id="bg-img-1"></div>
+        <div id="bg-img-2"></div>
+        <div id="bg-img-3"></div>
+        <div id="bg-img-4"></div>
+        <div id="bg-img-5"></div>
+      </section>
 
-            <section id="section7">
-                <!-- Background Images with CSS -->
-                <h2>Background Images with CSS - Background Patterns</h2>
-                <p>
-                    There are a lot of websites that offer repeating pattern images that you can use on your website. <a href="https://www.transparenttextures.com/" target="_blank">Transparent Textures</a>, <a href="https://heropatterns.com/" target="_blank">Hero Patterns</a>, and <a href="https://www.toptal.com/designers/subtlepatterns/" target="_blank">Subtle Patterns</a> all have a lot of options. There are also CSS background websites like <a href="https://www.magicpattern.design/tools/css-backgrounds" target="_blank">CSS Background Patterns</a> and <a href="https://projects.verou.me/css3patterns/" target="_blank">CSS3 Patterns Gallery</a>.
-                </p>
-                <div id="pattern1"></div>
-                <div id="pattern2"></div>
-                <div id="pattern3"></div>
-                <div id="pattern4"></div>
-                <div id="pattern5"></div>
-            </section>
+      <section id="section7">
+        <!-- Background Images with CSS -->
+        <h2>Background Images with CSS - Background Patterns</h2>
+        <p>
+          There are a lot of websites that offer repeating pattern images that
+          you can use on your website.
+          <a href="https://www.transparenttextures.com/" target="_blank"
+            >Transparent Textures</a
+          >,
+          <a href="https://heropatterns.com/" target="_blank">Hero Patterns</a>,
+          and
+          <a
+            href="https://www.toptal.com/designers/subtlepatterns/"
+            target="_blank"
+            >Subtle Patterns</a
+          >
+          all have a lot of options. There are also CSS background websites like
+          <a
+            href="https://www.magicpattern.design/tools/css-backgrounds"
+            target="_blank"
+            >CSS Background Patterns</a
+          >
+          and
+          <a href="https://projects.verou.me/css3patterns/" target="_blank"
+            >CSS3 Patterns Gallery</a
+          >.
+        </p>
+        <div id="pattern1"></div>
+        <div id="pattern2"></div>
+        <div id="pattern3"></div>
+        <div id="pattern4"></div>
+        <div id="pattern5"></div>
+      </section>
 
-            <section id="section8">
-                <!-- Floats -->
-                <h2>Floating Content with CSS</h2>
-                <p>
-                    Below, I have linked to two dog-related SVG files from the images folder in <code>img</code> tags (you can also paste SVG code directly into your HTML). Let's adjust the styles here so that the text appears to flow around the images, with one image on each side of the container.
-                </p>
-                <img src="images/corgi.svg" alt="vector drawing of a smiling corgi's face" width="100" height="100" class="img-100" id="corgi">
-                <p id="puppy-p">
-                    What cute puppies! We can <code>clear</code> the <code>float</code> on this paragraph. Let's use a <code>float</code> for their main purpose, which is to <code>display</code> text that wraps around an image, side-by-side.
-                </p>
-                <img src="images/dog-house.svg" alt="vector of a dog house" width="100" height="100" id="dog-house">
-                <p>
-                    This is the text that we want to wrap around the dog house on the right. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
-                </p>
-            </section>
+      <section id="section8">
+        <!-- Floats -->
+        <h2>Floating Content with CSS</h2>
+        <p>
+          Below, I have linked to two dog-related SVG files from the images
+          folder in <code>img</code> tags (you can also paste SVG code directly
+          into your HTML). Let's adjust the styles here so that the text appears
+          to flow around the images, with one image on each side of the
+          container.
+        </p>
+        <img
+          src="images/corgi.svg"
+          alt="vector drawing of a smiling corgi's face"
+          width="100"
+          height="100"
+          class="img-100"
+          id="corgi"
+        />
+        <p id="puppy-p">
+          What cute puppies! We can <code>clear</code> the <code>float</code> on
+          this paragraph. Let's use a <code>float</code> for their main purpose,
+          which is to <code>display</code> text that wraps around an image,
+          side-by-side.
+        </p>
+        <img
+          src="images/dog-house.svg"
+          alt="vector of a dog house"
+          width="100"
+          height="100"
+          id="dog-house"
+        />
+        <p>
+          This is the text that we want to wrap around the dog house on the
+          right. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat
+        </p>
+      </section>
 
-            <section id="section9">
-                <!-- The Display property -->
-                <h2>The Display Property</h2>
-                <p>
-                    The <code>display</code> property gives you a lot of control over the layout of elements on your pages. Many elements that are difficult to style because they <code>display: inline;</code>, you can change them to <code>block</code> with this property! Throughout this activity, we've seen the <code>display</code> property changed on elements to allow for the desired styling. In Module 5, we'll learn how to use this property to make <code>grid</code> and <code>flexbox</code> containers.
-                </p>
-                <dl>
-                    <dt><code>display</code> property values:</dt>
-                        <dd>&#8277;&nbsp;<code>inline</code></dd>
-                        <dd>&#8277;&nbsp;<code>block</code></dd>
-                        <dd>&#8277;&nbsp;<code>none</code></dd>
-                        <dd>&#8277;&nbsp;<code>inline-block</code></dd>
-                        <dd>&#8277;&nbsp;<code>list-item</code></dd>
-                        <dd>&#8277;&nbsp;<code>flexbox</code></dd>
-                        <dd>&#8277;&nbsp;<code>grid</code></dd>
-                </dl>
-            </section>
-            <a href="#top" id="btt" aria-label="back to top of page">
-                    <svg enable-background="new 0 0 50 50" height="50" viewbox="0 0 512 512" width="50" xmlns="http://www.w3.org/2000/svg">
-                        <g>
-                            <g>
-                                <g>
-                                    <path d="m256 16c-132.64 0-240 107.341-240 240 0 132.641 107.34 240 240 240 132.642 0 240-107.341 240-240 0-132.64-107.341-240-240-240zm109.602 249.602c-7.81 7.81-20.474 7.81-28.284 0l-61.318-61.318v151.716c0 11.046-8.954 20-20 20s-20-8.954-20-20v-151.716l-61.318 61.318c-7.811 7.811-20.474 7.81-28.284 0-7.811-7.811-7.811-20.474 0-28.284l95.46-95.46c7.806-7.806 20.489-7.796 28.284 0l95.46 95.46c7.811 7.81 7.811 20.474 0 28.284z"/>
-                                </g>
-                            </g>
-                        </g></svg>
-            </a>
-        </main>
+      <section id="section9">
+        <!-- The Display property -->
+        <h2>The Display Property</h2>
+        <p>
+          The <code>display</code> property gives you a lot of control over the
+          layout of elements on your pages. Many elements that are difficult to
+          style because they <code>display: inline;</code>, you can change them
+          to <code>block</code> with this property! Throughout this activity,
+          we've seen the <code>display</code> property changed on elements to
+          allow for the desired styling. In Module 5, we'll learn how to use
+          this property to make <code>grid</code> and
+          <code>flexbox</code> containers.
+        </p>
+        <dl>
+          <dt><code>display</code> property values:</dt>
+          <dd>&#8277;&nbsp;<code>inline</code></dd>
+          <dd>&#8277;&nbsp;<code>block</code></dd>
+          <dd>&#8277;&nbsp;<code>none</code></dd>
+          <dd>&#8277;&nbsp;<code>inline-block</code></dd>
+          <dd>&#8277;&nbsp;<code>list-item</code></dd>
+          <dd>&#8277;&nbsp;<code>flexbox</code></dd>
+          <dd>&#8277;&nbsp;<code>grid</code></dd>
+        </dl>
+      </section>
+      <a href="#top" id="btt" aria-label="back to top of page">
+        <svg
+          enable-background="new 0 0 50 50"
+          height="50"
+          viewbox="0 0 512 512"
+          width="50"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g>
+            <g>
+              <g>
+                <path
+                  d="m256 16c-132.64 0-240 107.341-240 240 0 132.641 107.34 240 240 240 132.642 0 240-107.341 240-240 0-132.64-107.341-240-240-240zm109.602 249.602c-7.81 7.81-20.474 7.81-28.284 0l-61.318-61.318v151.716c0 11.046-8.954 20-20 20s-20-8.954-20-20v-151.716l-61.318 61.318c-7.811 7.811-20.474 7.81-28.284 0-7.811-7.811-7.811-20.474 0-28.284l95.46-95.46c7.806-7.806 20.489-7.796 28.284 0l95.46 95.46c7.811 7.81 7.811 20.474 0 28.284z"
+                />
+              </g>
+            </g>
+          </g>
+        </svg>
+      </a>
+    </main>
 
-        <footer>
-            <p>
-                Copyright &copy; 2023 - GIT215 - Prof. Barnett
-            </p>
-        </footer>
-    </body>
+    <footer>
+      <p>Copyright &copy; 2023 - GIT215 - Prof. Barnett</p>
+    </footer>
+  </body>
 </html>
