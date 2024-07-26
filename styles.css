@@ -479,15 +479,8 @@ footer{
     background: var(--dk-gray) right no-repeat url("images/puppy-photo.jpg");
 }
 
-/* For the third div, let's include the a background color, allow the image to tile, but center the tiling in the container */
-/* 
-    TO DO: add styles to the div with an ID of bg-img-3 in this section that will:
-        - add the lt-blue color to the background
-        - center the image pattern in the container
-        - add the puppy-photo as a repeating background to the container
-*/
 #bg-img-3{
-    
+    background: var(--lt-blue) center url("images/puppy-photo.jpg");
 }
 
 /* For the fourth div, let's style this like the second div, but let's change the height of the div to 100px, so it fits the height of the image. It will make it look like the image and div are the same height */
