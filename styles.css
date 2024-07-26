@@ -395,19 +395,6 @@ footer{
     box-shadow: var(--box-shadow-sm);
 }
 
-
-/* ------------- SECTION 3 STYLES ---------------- */
-/* Sizing with width and height */
-
-/* For the corgi graphic */
-/* 
-    TO DO: add styles to the image in this section that will:
-        - turn this into a block-level element
-        - make this display at 200px wide
-        - set the height to auto
-        - add margin to center this element
-        - add the small filter drop shadow from the CSS variables in the root
-*/
 #section3 img{
     display: block;
     width: 200px;
@@ -455,6 +442,16 @@ footer{
         - move this to the right from its original location by 25px
 */
 #section3 div::after{
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: var(--lt-blue);
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+    transform: translateY(-50px);
+    transform:translateX(25px, -50px);
 }
 
 
