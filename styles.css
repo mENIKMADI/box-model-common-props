@@ -341,7 +341,7 @@ footer{
     font-size: 1.1rem;
     font-weight: bold;
     width: 50%;
-    box-shadow: var(--filter-shadow-lg);
+   box-shadow: var(--box-shadow-lg);
 }
 
 /* For the first link in this section: */
