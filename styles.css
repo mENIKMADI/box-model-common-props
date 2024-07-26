@@ -318,22 +318,6 @@ footer{
 */
 /* -------------------------------------------------- */
 
-/* ------------- SECTION 2 STYLES ---------------- */
-/* Practicing the box model & seeing it in action */
-/* content, padding, borders, margin, dev tools, inline, & block elements */
-
-/* For both links in the section */
-/* 
-    TO DO: add styles to both links in this section that will:
-        - make these links display as block-level elements
-        - remove the underline
-        - align the text to the center
-        - make the font display at 1.1rem
-        - make the text bold
-        - tell these to be 50% wide in the container
-        - add the large box shadow
-*/
-/* ADD SELECTOR AND STYLES HERE */
 #section2 a {
     display: block;
     text-decoration: none;
@@ -384,7 +368,7 @@ footer{
 #section2 a:first-of-type:hover{
     background-color: var(--dk-blue);
     color: var(--white);
-  border-color: var(--lt-blue);
+    border-color: var(--lt-blue);
     box-shadow: var(--box-shadow-sm);
 }
 
@@ -558,7 +542,7 @@ footer{
         - clear any floats
 */
 #section9{
-    
+    clear: both;
 }
 
 /* ------------- SECTION 9 STYLES ---------------- */
